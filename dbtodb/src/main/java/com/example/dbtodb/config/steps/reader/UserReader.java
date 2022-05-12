@@ -26,17 +26,4 @@ public class UserReader extends RepositoryItemReader<User> implements ItemReader
         sorts.put("id", Sort.Direction.ASC);
         setSort(sorts);
     }
-
-    public class UserRowMapper implements RowMapper<User>{
-
-        @Override
-        public User mapRow(ResultSet rs, int rowNum) throws SQLException {
-            User user = new User();
-            user.setId(rs.getInt("id"));
-            user.setName(rs.getNString("name"));
-            user.setEmail(rs.getNString("email"));
-            System.out.println(user.getName());
-            return user;
-        }
-    }
 }
