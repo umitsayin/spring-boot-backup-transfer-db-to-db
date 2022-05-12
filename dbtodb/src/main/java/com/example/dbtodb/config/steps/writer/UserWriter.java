@@ -30,7 +30,7 @@ public class UserWriter implements ItemWriter<User> {
 
             session.getTransaction().commit();
 
-            System.out.println("Şehir eklendi.");
+            System.out.println("User saved");
         }finally {
             factory.close();
         }
